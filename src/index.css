@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap');
 
 :root {
-  font-family: "Zalando Sans SemiExpanded", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -13,12 +12,17 @@
 
 * {
   box-sizing: border-box;
+  font-family: "Zalando Sans SemiExpanded", sans-serif;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+}
+
+h1 {
+  font-weight: 400;
 }
 
 a {
@@ -34,6 +38,25 @@ a:hover {
 
 img {
   display: block;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 22px;
+}
+
+input {
+  border-radius: 10px;
+  border: 2px solid lightgray;
+  padding: 10px;
+  width: 356px;
+  font-size: 22px;
+}
+
+button {
+  cursor: pointer;
 }
 
 @media (prefers-color-scheme: light) {

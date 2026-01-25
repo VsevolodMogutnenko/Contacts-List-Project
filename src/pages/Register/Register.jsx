@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { FaEye } from "react-icons/fa";
 import { LuEyeClosed } from "react-icons/lu";
+import styles from "./Register.module.css"
 
 export const Register = () => {
     const [name, setName] = useState("")
@@ -12,13 +13,13 @@ export const Register = () => {
     const handleInputChange = (event) => {
         const {value, placeholder} = event.target
         switch(placeholder) {
-            case 'Name':
+            case 'Enter your name':
                 setName(value)
                 break
-            case 'Email':
+            case 'Enter your email':
                 setEmail(value)
                 break
-            case 'Password':
+            case 'Enter your password':
                 setPassword(value)
                 break
             default:
@@ -35,14 +36,24 @@ export const Register = () => {
     }
 
     return <>
-        <form>
-            <input type="text" placeholder="Name" value={name} onChange={handleInputChange} />
-            <input type="email" placeholder="Email" value={email} onChange={handleInputChange}/>
-            <div>
-                <input type={type?"text":"password"} placeholder="Password" value={password} onChange={handleInputChange}/>
-                <button type="button" onClick={handleTypeChange}>{type?<FaEye size={20}/>:<LuEyeClosed size={20}/>}</button>
+        <form className={styles.form}>
+            <h1>Register</h1>
+            <label>
+                Name
+                <input type="text" placeholder="Enter your name" value={name} onChange={handleInputChange} className={styles.input}/>
+            </label>
+            <label>
+                Email
+                <input type="email" placeholder="Enter your email" value={email} onChange={handleInputChange} className={styles.input}/>
+            </label>
+            <div className={styles.showContainer}>
+                <label>
+                    Password
+                    <input type={type?"text":"password"} placeholder="Enter your password" value={password} onChange={handleInputChange} className={styles.showInput}/>
+                </label>
+                <button type="button" onClick={handleTypeChange} className={styles.showButton}>{type?<FaEye size={26}/>:<LuEyeClosed size={26}/>}</button>
             </div>
-            <button type="submit">Register</button>
+            <button type="submit" className={styles.submitButton}>Register</button>
         </form>
     </>
 }
