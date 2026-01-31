@@ -1,0 +1,31 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #005461;
+    padding: 20px 100px;
+    position: absolute;
+    bottom: 0;
+}
+
+.footerList {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.footerLink {
+    display: block;
+    color: white;
+    width: 40px;
+    height: 40px;
+}
+
+.footerLink:hover {
+    color: #8FABD4;
+}
+
+.footerRights {
+    color: white;
+    font-size: 20px;
+}

@@ -3,6 +3,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 50px;
     margin: 0;
     padding: 0;
+}
+
+.navLink {
+    color: white;
+    font-size: 40px;
+}
+
+.navLink:hover {
+  color: #8FABD4;
 }

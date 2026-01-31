@@ -6,9 +6,9 @@ import styles from './Nav.module.css'
 export const Nav = () => {
     return (
         <ul className={styles.navList}>
-            <li><Link to="/"><img src={logo} alt="logo" width={100} height={100}/></Link></li>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/PhoneBook">PhoneBook</Link></li>
+            <li><Link to="/" className={styles.navLink}><img src={logo} alt="logo" width={100} height={100}/></Link></li>
+            <li><Link to="/" className={styles.navLink}>Home</Link></li>
+            <li><Link to="/PhoneBook" className={styles.navLink}>PhoneBook</Link></li>
             <AusNav />
         </ul>
     )

@@ -43,3 +43,8 @@
 .submitButton:hover {
     background-color: #007587;
 }
+
+.extraLink {
+    color: #6f96d1;
+    font-size: 18px;
+}

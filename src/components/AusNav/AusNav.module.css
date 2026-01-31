@@ -1,0 +1,8 @@
+.navLink {
+    color: white;
+    font-size: 40px;
+}
+
+.navLink:hover {
+  color: #8FABD4;
+}

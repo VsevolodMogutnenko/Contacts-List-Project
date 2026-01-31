@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { FaEye } from "react-icons/fa";
 import { LuEyeClosed } from "react-icons/lu";
 import styles from "./Register.module.css"
+import { Link } from 'react-router-dom'
 
 export const Register = () => {
     const [name, setName] = useState("")
@@ -54,6 +55,7 @@ export const Register = () => {
                 <button type="button" onClick={handleTypeChange} className={styles.showButton}>{type?<FaEye size={26}/>:<LuEyeClosed size={26}/>}</button>
             </div>
             <button type="submit" className={styles.submitButton}>Register</button>
+            <Link to="/Login" className={styles.extraLink}>Already have an account?</Link>
         </form>
     </>
 }
